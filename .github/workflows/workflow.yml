@@ -85,7 +85,7 @@ jobs:
       # Kustomize Kubernetes resources.
       - name: Kustomize Kubernetes resources
         working-directory: ./manifests
-        run: kustomize edit set image REPOSITORY:TAG=${IMAGE_REPOSITORY}:sha-${GITHUB_SHA::7}
+        run: kustomize edit set image REPOSITORY:TAG=${IMAGE_REPOSITORY}:sha-${GITHUB_SHA::7} 
 
       # Deploy to Kubernetes.
       - name: Deploy to Kubernetes
