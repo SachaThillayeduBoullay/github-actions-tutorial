@@ -13,12 +13,12 @@ on:
 jobs:
   # run all unit tests
   run-tests:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       # check out the pull request's source code
       - name: Check out source code
         uses: actions/checkout@v2
-        
+
       # Install Go.
       - name: Set up Go
         uses: actions/setup-go@v2-beta
